@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <title>辛想-GitHub人才挖掘工具</title>
+    <meta name="description" content="辛想-GitHub人才挖掘工具">
+    <meta name="keywords" content="GitHub,招聘,人才">
+    <meta name="author" content="@再见猪八戒,chay0103@163.com">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="http://staticfile00.b0.upaiyun.com/vendor.css" />
+    <!-- build:css(.tmp) /styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild -->
+    <base href="/">
+  </head>
+  <body ng-app="App">
+    <!-- Main App Content -->
+    <div style="overflow:hidden;width:100%;">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" ng-controller="navCtl">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/index">辛想-GitHub</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left:15%;">
+                    <form class="navbar-form navbar-left" role="search" ng-submit="search()" id="bar-search" style="display:none;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="输入开发语言类型" ng-model="sw">
+                        </div>
+                        <button type="submit" class="btn btn-default">查看</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/rank">排行榜</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div ng-view></div>
+    </div>
+    <!-- Main App Content Done -->
+
+    <a href="#0" class="cd-top">Top</a>
+    <script src="http://staticfile00.b0.upaiyun.com/vendor.js"></script>
+
+        <!-- build:js({.tmp,app}) /scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/factorys/anchorScroll.js"></script>
+        <script src="scripts/controllers/common.js"></script>
+        <script src="scripts/controllers/indexCtl.js"></script>
+        <!-- <script src="scripts/controllers/reportCtl.js"></script> -->
+        <script src="scripts/controllers/searchCtl.js"></script>
+        <script src="scripts/controllers/rankCtl.js"></script>
+        <script src="scripts/controllers/navCtl.js"></script>
+        <!-- <script src="scripts/controllers/aboutCtl.js"></script> -->
+        <script src="scripts/bigcache/av-mini.js"></script>
+        <script src="scripts/bigcache/bigcache.js"></script>
+</body>
+</html>
