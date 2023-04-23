@@ -1,9 +1,0 @@
-# robotstxt.org
-
-User-agent: *
-    Disallow: /
-    Allow: /$
-    Allow: /index$
-    Allow: /donate$
-    Allow: /about$
-    Allow: /report$
