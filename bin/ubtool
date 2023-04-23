@@ -6,4 +6,17 @@ if [ "$1" = "--debug" ]; then
   shift
 fi
 
-echo "ubtool -----------------"
+if [ -n "$UBTOOL_DEBUG" ]; then
+  # https://wiki-dev.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful
+  export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
+  set -x
+fi
+
+echo "  _    _ _  _______          _   ______                 _______ _     _             "
+echo " | |  | | ||__   __|        | | |  ____|               |__   __| |   (_)            "
+echo " | |  | | |__ | | ___   ___ | | | |____   _____ _ __ _   _| |  | |__  _ _ __   __ _ "
+echo " | |  | | '_ \| |/ _ \ / _ \| | |  __\ \ / / _ \ '__| | | | |  | '_ \| | '_ \ / _` |"
+echo " | |__| | |_) | | (_) | (_) | | | |___\ V /  __/ |  | |_| | |  | | | | | | | | (_| |"
+echo "  \____/|_.__/|_|\___/ \___/|_| |______\_/ \___|_|   \__, |_|  |_| |_|_|_| |_|\__, |"
+echo "                                                      __/ |                    __/ |"
+echo "                                                     |___/                    |___/ "
